@@ -26,7 +26,7 @@ variable "application_id" {
 
 variable "tier" {
   description = "This tag help with security tracking, is the resource publicly accessible, Options: public or private"
-  default     = "public"
+  default     = "private"
 }
 
 variable "managedBy" {

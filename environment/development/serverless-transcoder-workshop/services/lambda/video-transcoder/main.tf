@@ -11,6 +11,8 @@ resource "aws_lambda_function" "lambda" {
     variables = {
       ELASTIC_TRANSCODER_REGION      = "${var.region}"
       ELASTIC_TRANSCODER_PIPELINE_ID = "${var.pipeline_id}"
+      SERVICE_ACCOUNT                = "${var.service_account}"
+      DATABASE_URL                   = "${var.db_url}"
     }
   }
 

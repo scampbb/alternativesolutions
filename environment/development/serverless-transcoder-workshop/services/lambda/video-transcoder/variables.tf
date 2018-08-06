@@ -52,10 +52,6 @@ variable "timeout" {
   default     = "30"
 }
 
-variable "pipeline_id" {
-  default = "1532828392988-nmbali"
-}
-
 variable "action" {
   description = "The AWS Lambda action you want to allow in this statement."
   default     = "lambda:InvokeFunction"
@@ -79,4 +75,19 @@ variable "bucket" {
 variable "events" {
   description = "Specifies event for which to send notifications."
   default     = ["s3:ObjectCreated:*"]
+}
+
+#####
+#This section is for the Environment Variables Parameters
+#####
+variable "pipeline_id" {
+  default = "1532828392988-nmbali"
+}
+
+variable "service_account" {
+  default = "gpstudios-sfb-firebase-key.json"
+}
+
+variable "db_url" {
+  default = "https://gpstudios-sfb.firebaseio.com/"
 }
